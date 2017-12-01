@@ -113,7 +113,19 @@ https://git-for-windows.github.io/
 
 	    add a lean file
 
+11 使用git reset命令 回退版本
+	$ git reset --hard HEAD^
+	HEAD is now at fdae48a 教程添加到了第9步的第2小步
 
+12 使用 git reflog 查看命令历史 commot_id
+	$ git reflog
+	fdae48a (HEAD -> master) HEAD@{0}: reset: moving to HEAD^
+	ce69e84 HEAD@{1}: commit: 教程添加到了第10步，使用git log
+	fdae48a (HEAD -> master) HEAD@{2}: commit: 教程添加到了第9步的第2小步
+	c02dcba HEAD@{3}: commit: 教程添加到了第9步
+	61dd8e8 HEAD@{4}: commit (initial): add a lean file
+
+13 理解工作区、暂存区、仓库
 
 
 
