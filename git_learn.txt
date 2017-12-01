@@ -38,10 +38,81 @@ https://git-for-windows.github.io/
 
 	no changes added to commit (use "git add" and/or "git commit -a")
 8 使用git diff 查看git_learn.txt的改动
+	$ git diff git_learn.txt
+
+	diff --git a/git_learn.txt b/git_learn.txt
+	index 37cbd1b..7e61482 100644
+	--- a/git_learn.txt
+	+++ b/git_learn.txt
+	@@ -3,20 +3,30 @@ https://git-for-windows.github.io/
+	 2 安装
+	 3 开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功
+	 4 配置用户名和邮箱
+	-$ git config --global user.name "water_temperature"
+	-$ git config --global user.email "1479263504@qq.com"
+	+       $ git config --global user.name "water_temperature"
+	+       $ git config --global user.email "1479263504@qq.com"
+	 5 创建一个版本库
+	 5.1 创建一个空目录
+	-$ mkdir mars_learn
+	-$ cd mars_learn
+	-$ pwd
+	-/c/Users/Administrator/mars_learn
+	+       $ mkdir mars_learn
+	+       $ cd mars_learn
+	+       $ pwd
+	+       /c/Users/Administrator/mars_learn
+	 5.2 通过git init命令把这个目录变成Git可以管理的仓库
+	-$ git init
+	-Initialized empty Git repository in C:/Users/Administrator/mars_learn/.git/
+	+       $ git init
+	+       Initialized empty Git repository in C:/Users/Administrator/mars_learn/.git/
+	 5.3 查看仓库下文件
+	-$ ls -ah
+	-./  ../  .git/
+	-6 将文件添加到仓库
+	+       $ ls -ah
+	+       ./  ../  .git/
+	+6 将文件添加到版本库
+	 6.1 写一个文件，如git安装.txt放在 mars_learn 目录下
+	-6.2 用命令git add告诉Git，把文件添加到仓库
+	\ No newline at end of file
+	+6.2 用命令git add告诉Git，把文件添加到仓库
+	+       $ git add git_learn.txt
+	+6.3 用命令git commit告诉Git，把文件提交到仓库
+	+       $ git commit -m "add a lean file"
+	+       [master (root-commit) 61dd8e8] add a lean file
+	+        1 file changed, 22 insertions(+)
+	+        create mode 100644 git_learn.txt
+	+
+	+7 修改git_learn.txt文件后，用git status 查看仓库状态
+	+
+	+
 
 9 提交修改到仓库
 9.1 $ git add git_learn.txt
 9.2 $ git commit -m "教程添加到了第9步"
+
+10 使用git log 命令查看改动日志
+	$ git log
+	commit fdae48ae091e581e896528beb60b87b6ee2a5486 (HEAD -> master)
+	Author: water_temperature <1479263504@qq.com>
+	Date:   Fri Dec 1 15:08:30 2017 +0800
+
+	    教程添加到了第9步的第2小步
+
+	commit c02dcbac1db910aae08acad9661db83c5148876b
+	Author: water_temperature <1479263504@qq.com>
+	Date:   Fri Dec 1 14:51:54 2017 +0800
+
+	    教程添加到了第9步
+
+	commit 61dd8e8a68335a122e1a63ca33cc48956de03f9c
+	Author: water_temperature <1479263504@qq.com>
+	Date:   Fri Dec 1 14:34:21 2017 +0800
+
+	    add a lean file
+
 
 
 
