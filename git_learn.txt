@@ -3,8 +3,8 @@ https://git-for-windows.github.io/
 2 安装
 3 开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功
 4 配置用户名和邮箱
-	$ git config --global user.name "water_temperature"
-	$ git config --global user.email "1479263504@qq.com"
+	$ git config --global user.name ""
+	$ git config --global user.email ""
 5 创建一个版本库
 5.1 创建一个空目录
 	$ mkdir mars_learn
@@ -49,9 +49,9 @@ https://git-for-windows.github.io/
 	 3 开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功
 	 4 配置用户名和邮箱
 	-$ git config --global user.name "water_temperature"
-	-$ git config --global user.email "1479263504@qq.com"
-	+       $ git config --global user.name "water_temperature"
-	+       $ git config --global user.email "1479263504@qq.com"
+	-$ git config --global user.email ""
+	+       $ git config --global user.name ""
+	+       $ git config --global user.email ""
 	 5 创建一个版本库
 	 5.1 创建一个空目录
 	-$ mkdir mars_learn
@@ -130,7 +130,7 @@ https://git-for-windows.github.io/
 14 使用 git checkout -- filename可以丢弃工作区的修改
 15 用命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
 16 使用rm 删除工作区文件 使用git rm 删除工作区文件。如果没提交，可使用git checkout 从库中恢复rm的文件，但git rm的无法恢复。可以使用回退版本的方式恢复git rm的文件
-17 注册github账号 water2temperature  1479263504@qq.com Zkf@73360#
+17 注册github账号 
 18 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key
 	$ ssh-keygen -t rsa -C "youremail@example.com"
 19 在github上，写入自己的公钥，创建仓库 git_learn 
