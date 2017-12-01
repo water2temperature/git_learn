@@ -126,6 +126,36 @@ https://git-for-windows.github.io/
 	61dd8e8 HEAD@{4}: commit (initial): add a lean file
 
 13 理解工作区、暂存区、仓库
+	git add 只是把修改保存到暂存区，git commit 则把暂存区的修改提交到仓库；如果有多次修改，可以使用多个 git add命令，最后git commit提交
+14 使用 git checkout -- filename可以丢弃工作区的修改
+15 用命令git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
+16 使用rm 删除工作区文件 使用git rm 删除工作区文件。如果没提交，可使用git checkout 从库中恢复rm的文件，但git rm的无法恢复。可以使用回退版本的方式恢复git rm的文件
+17 注册github账号 water2temperature  1479263504@qq.com Zkf@73360#
+18 创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key
+	$ ssh-keygen -t rsa -C "youremail@example.com"
+19 在github上，写入自己的公钥，创建仓库 git_learn 
+20 把一个已有的本地仓库与之关联，并把内容推送到github
+	$ git remote add origin git@github.com:water2temperature/git_learn.git
+	$ git push -u origin master
+	The authenticity of host 'github.com (192.30.255.112)' can't be established.
+	RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+	Are you sure you want to continue connecting (yes/no)? y
+	Please type 'yes' or 'no': yes
+	Warning: Permanently added 'github.com,192.30.255.112' (RSA) to the list of known hosts.
+	Counting objects: 21, done.
+	Delta compression using up to 2 threads.
+	Compressing objects: 100% (15/15), done.
+	Writing objects: 100% (21/21), 3.59 KiB | 919.00 KiB/s, done.
+	Total 21 (delta 5), reused 0 (delta 0)
+	remote: Resolving deltas: 100% (5/5), done.
+	To github.com:water2temperature/git_learn.git
+	 * [new branch]      master -> master
+	Branch 'master' set up to track remote branch 'master' from 'origin'.
+21 如果本地再做了修改，使用如下命令推送到远程
+	$ git push origin master
+
+
+
 
 
 
