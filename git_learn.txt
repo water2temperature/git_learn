@@ -1,0 +1,22 @@
+1 下载地址
+https://git-for-windows.github.io/
+2 安装
+3 开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功
+4 配置用户名和邮箱
+$ git config --global user.name "water_temperature"
+$ git config --global user.email "1479263504@qq.com"
+5 创建一个版本库
+5.1 创建一个空目录
+$ mkdir mars_learn
+$ cd mars_learn
+$ pwd
+/c/Users/Administrator/mars_learn
+5.2 通过git init命令把这个目录变成Git可以管理的仓库
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/mars_learn/.git/
+5.3 查看仓库下文件
+$ ls -ah
+./  ../  .git/
+6 将文件添加到仓库
+6.1 写一个文件，如git安装.txt放在 mars_learn 目录下
+6.2 用命令git add告诉Git，把文件添加到仓库
