@@ -28,5 +28,21 @@ https://git-for-windows.github.io/
 	 create mode 100644 git_learn.txt
 
 7 修改git_learn.txt文件后，用git status 查看仓库状态
+	$ git status
+	On branch master
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git checkout -- <file>..." to discard changes in working directory)
+
+		modified:   git_learn.txt
+
+	no changes added to commit (use "git add" and/or "git commit -a")
+8 使用git diff 查看git_learn.txt的改动
+
+9 提交修改到仓库
+9.1 $ git add git_learn.txt
+9.2 $ git commit -m "教程添加到了第9步"
+
+
 
 
